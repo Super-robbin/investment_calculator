@@ -7,7 +7,7 @@ const UserInput = ({ userInput, setUserInput }) => {
     setUserInput((prevUserInput) => {
       return {
         ...prevUserInput,
-        [inputIdentifier]: newValue,
+        [inputIdentifier]: +newValue,
       };
     });
   };
@@ -23,6 +23,9 @@ const UserInput = ({ userInput, setUserInput }) => {
             value={userInput.initialInvestment}
             onChange={(event) =>
               handleChange("initialInvestment", event.target.value)
+            // event.target.value will get a value as a string, even though we specify type="number",
+            // therefore in the handleChange, we just need to add '+' in front of newValue,
+            // so that it changes to number
             }
           />
         </p>
