@@ -10,6 +10,7 @@ const App = () => {
     expectedReturn: 6,
     duration: 10,
   });
+
   return (
     <>
       <Header />

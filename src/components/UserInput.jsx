@@ -1,7 +1,6 @@
 // import { useState } from "react";
 
 const UserInput = ({ userInput, setUserInput }) => {
-  
 
  const handleChange = (inputIdentifier, newValue) => {
     setUserInput((prevUserInput) => {
